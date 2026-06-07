@@ -62,9 +62,6 @@ food_qty = int(input(f"How many units of '{food_choice}'? "))
 
 # Pass the user's inputs directly into the class method!
 kikus_diner.place_order(food_choice, food_qty)
-        
-    
-print("\n--- Taking Orders ---")
 
 # We create a flag variable to control the loop
 ordering = True
@@ -84,5 +81,5 @@ while ordering:
     if anything_else == "no":
         ordering = False
         print("\nThank you for ordering!")
-        print(f"Your final grand total is: ${diner.total_bill:.2f}")
+        print(f"Your final grand total is: ${kikus_diner.total_bill:.2f}")
         print("Have a wonderful day!")
