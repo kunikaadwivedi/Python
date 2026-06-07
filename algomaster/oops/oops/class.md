@@ -15,3 +15,9 @@ A class is a recipe. An object is a cake baked from that recipe. The recipe does
 
 ## Note 
 That's the whole trick: one function defined once, reused for every instance, with self filling in which instance it should look at.
+
+## __bases__
+This is a tuple of the classes a class inherits from directly. For a plain class Product:, that tuple contains just object.
+
+# 4.__new__ vs __init__ 
+Python actually uses two methods to build an object, not one. __new__ creates the empty instance, and __init__ fills it in. The class call (Product(...)) calls __new__ first, which returns a new (typically empty) object of the class, and then Python passes that object to __init__ as self.
