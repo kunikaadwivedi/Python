@@ -1,0 +1,11 @@
+prefix=/Users/kunikaadwivedi/Documents/Projects/Python/.conda
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+toolexeclibdir=${libdir}
+includedir=/Users/kunikaadwivedi/Documents/Projects/Python/.conda/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.4.8
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}
