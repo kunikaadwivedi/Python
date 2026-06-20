@@ -21,3 +21,11 @@ This is a tuple of the classes a class inherits from directly. For a plain class
 
 # 4.__new__ vs __init__ 
 Python actually uses two methods to build an object, not one. __new__ creates the empty instance, and __init__ fills it in. The class call (Product(...)) calls __new__ first, which returns a new (typically empty) object of the class, and then Python passes that object to __init__ as self.
+
+# 5. @classmethod
+
+### The Key Difference: self vs cls
+
+Instance Method: Takes self as its first parameter. It has access to individual object data (like self.name or self.balance).
+
+Class Method: Takes cls as its first parameter. Instead of receiving a specific object, Python automatically passes the entire class into it. This means it can access and modify class-level state, but it cannot see individual object data.
