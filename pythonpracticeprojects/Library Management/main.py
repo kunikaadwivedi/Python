@@ -1,4 +1,6 @@
-from Book import Book 
+from book import Book 
+from user import User
+from library import Library
 def main():
     
     b1 = Book(234, "Harry Potter and the Philosopher's Stone", "J.K. Rowling", 17)

@@ -8,8 +8,8 @@ class Book:
     def display_info(self):
         return f"ID: {self.book_id} | Title: {self.title} | Author: {self.author} | Available: {self.quantity}"
     
-    def check_availbility(self):
+    def check_availability(self):
         return self.quantity>0
     
-    def update_quantiy(self, quantity):
+    def update_quantity(self, quantity):
         self.quantity += quantity #borrow or bought
