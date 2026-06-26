@@ -45,7 +45,6 @@ def main():
             found_books = library.search_book_by_title(title)
             if found_books:
                 for book in found_books:
-                    # FIXED: Added print() since display_info() returns a string
                     print(book.display_info()) 
             else:
                 print(f"No books found with the title '{title}'.")
@@ -56,7 +55,6 @@ def main():
             user = next((u for u in library.users if u.user_id == user_id), None)
             book = next((b for b in library.books if b.book_id == book_id), None)
             if user and book:
-                # FIXED: Added print() to capture the return message from the method
                 print(user.borrow_books(book))
             else:
                 print("Invalid user or book ID.")
@@ -67,7 +65,6 @@ def main():
             user = next((u for u in library.users if u.user_id == user_id), None)
             book = next((b for b in library.books if b.book_id == book_id), None)
             if user and book:
-                # FIXED: Added print() to capture the return message from the method
                 print(user.returning_books(book))
             else:
                 print("Invalid user or book ID.")

@@ -23,7 +23,6 @@ class Library():
         if self.books:
             print("\n--- Books in the library ---")
             for book in self.books:
-                # FIXED: Changed display_book_info() to display_info() to match book.py
                 print(book.display_info()) 
         else:
             print("No books available in library")
@@ -39,7 +38,6 @@ class Library():
         quantity = int(input("Enter the quantity of books: "))
         
         new_book = Book(book_id, title, author, quantity)
-        # FIXED: Changed self.add_book to self.add_books
         self.add_books(new_book) 
         print("Book added successfully!")
-        print(new_book.display_info()) # FIXED: Adjusted method name here too
+        print(new_book.display_info()) 
