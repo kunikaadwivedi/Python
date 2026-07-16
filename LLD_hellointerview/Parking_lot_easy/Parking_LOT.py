@@ -11,7 +11,7 @@ from vehicle_size import VehicleSize
 from user_error_handling import UserErrorHandling
 
 class ParkingLot:
-    _instance = Optional['ParkingLot'] = None
+    _instance : Optional['ParkingLot'] = None
     _lock = threading.Lock()
     
     
