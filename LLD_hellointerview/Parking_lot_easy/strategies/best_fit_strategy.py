@@ -5,7 +5,7 @@ from spot_allocation_strategy import SpotAllocationStrategy
 from model.parking_floors import ParkingFloors
 
 class BestFitStrategy(SpotAllocationStrategy):
-    def find_spot(self, floors: List['ParkingFloors'], size: VehicleSize) -> Optional['ParkingSpot']:
+    def find_spot(self, floors: List['ParkingFloors'], size: VehicleSize) -> Optional['ParkingSpots']:
         for spot_size in VehicleSize:
             if spot_size < size:
                 continue

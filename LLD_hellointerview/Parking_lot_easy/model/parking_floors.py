@@ -1,7 +1,8 @@
 from typing import List, Dict, Optional
 from parking_spots import ParkingSpots
 from vehicle_size import VehicleSize
-from parking_spot import ParkingSpot
+from model.parking_spots import ParkingSpots
+
 
 class ParkingFloors:
     def __init__(self, floor_number: int, spot_counts:Dict[VehicleSize, int]):
@@ -25,7 +26,7 @@ class ParkingFloors:
                     }
         return prefixes.get(size, "X")
     
-    def find_available_spot(self, size: VehicleSize) -> Optional[ParkingSpot]:
+    def find_available_spot(self, size: VehicleSize) -> Optional[ParkingSpots]:
         for spot in self._spots:
             if spot.s_available and spot.can_fit_vehicle(size):
                 return spot
@@ -36,6 +37,6 @@ class ParkingFloors:
         return self._floor_number
     
     @property
-    def spots(self) -> List[ParkingFloors]:
+    def spots(self) -> List['ParkingSpots']:
         return self._spots
             

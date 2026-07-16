@@ -1,8 +1,10 @@
 from datetime import datetime
 from typing import Optional
+from vehicle import Vehicle
+from parking_spots import ParkingSpots
 
 class ParkingTicket:
-    def __init__(self, ticket_id: str, vehicle: Vehicle, spot: 'ParkingSpot'):
+    def __init__(self, ticket_id: str, vehicle: Vehicle, spot: 'ParkingSpots'):
         self._ticket_id = ticket_id
         self._vehicle = vehicle
         self._spot = spot
