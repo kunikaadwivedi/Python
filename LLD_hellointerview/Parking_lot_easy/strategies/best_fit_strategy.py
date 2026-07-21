@@ -1,7 +1,7 @@
 from typing import List, Optional
 from model.parking_spots import ParkingSpots
 from vehicle_size import VehicleSize
-from spot_allocation_strategy import SpotAllocationStrategy
+from strategies.spot_allocation_strategy import SpotAllocationStrategy
 from model.parking_floors import ParkingFloors
 
 class BestFitStrategy(SpotAllocationStrategy):

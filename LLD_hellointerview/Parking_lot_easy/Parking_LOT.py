@@ -61,7 +61,7 @@ class ParkingLot:
         ticket.set_exit_time(datetime.now())
         fee = self._fee_strategy.calculated_fee(ticket)
         
-        ticket.spot.unpark_vehicle()
+        ticket.spot_.unpark_vehicle()
         print(f"Unparked {ticket.vehicle} from spot {ticket.spot.spot_id}. Fee: ${fee:.2f}")
         
         return fee

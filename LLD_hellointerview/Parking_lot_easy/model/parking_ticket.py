@@ -1,13 +1,13 @@
 from datetime import datetime
 from typing import Optional
-from vehicle import Vehicle
-from parking_spots import ParkingSpots
+from model.vehicle import Vehicle
+from model.parking_spots import ParkingSpots
 
 class ParkingTicket:
-    def __init__(self, ticket_id: str, vehicle: Vehicle, spot: 'ParkingSpots'):
+    def __init__(self, ticket_id: str, vehicle: Vehicle, spot_id: 'ParkingSpots'):
         self._ticket_id = ticket_id
         self._vehicle = vehicle
-        self._spot = spot
+        self._spot_id = spot_id
         self._entry_time = datetime.now()
         self._exit_time: Optional[datetime] = None
         

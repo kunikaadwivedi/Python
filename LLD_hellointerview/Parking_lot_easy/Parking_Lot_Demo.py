@@ -8,7 +8,6 @@ from model.bike import Bike
 from model.car import Car
 from model.truck import Truck
 from user_error_handling import UserErrorHandling
-from model.parking_spots import ParkingSpots
 
 def main() -> None:
     floor1_counts = {VehicleSize.SMALL:2, VehicleSize.MEDIUM:3, VehicleSize.LARGE:1}
@@ -20,7 +19,7 @@ def main() -> None:
     ]
     
     lot = ParkingLot.get_instance()
-    lot.initialize(floors, HourlyFeeStrategy(), NearestFirstStrategy())
+    lot.initialize(floors, HourlyFeeStrategy(7.8), NearestFirstStrategy())
     
     lot.display_availability()
     

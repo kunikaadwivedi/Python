@@ -1,7 +1,7 @@
 import threading 
 from typing import Optional
 from vehicle_size import VehicleSize
-from vehicle import Vehicle
+from model.vehicle import Vehicle
 from user_error_handling import UserErrorHandling
 
 class ParkingSpots:
@@ -21,7 +21,7 @@ class ParkingSpots:
         with self._lock:
             if not self.is_available():
                 raise UserErrorHandling(f"spot {self._spot_id} is already occupied.")
-            if not self.can_fit_vehicle(vehicle.get_size()):
+            if not self.can_fit_vehicle(vehicle.size):
                 raise UserErrorHandling(f"Vehicle size {vehicle.size.name} cannot fit in spot size {self._size.name}.")
             self._parked_vehicle = vehicle
             

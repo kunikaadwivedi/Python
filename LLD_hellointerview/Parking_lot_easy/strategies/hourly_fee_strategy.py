@@ -1,4 +1,4 @@
-from fee_strategy import FeesStrategy
+from strategies.fee_strategy import FeesStrategy
 from model.parking_ticket import ParkingTicket
 
 class HourlyFeeStrategy(FeesStrategy):

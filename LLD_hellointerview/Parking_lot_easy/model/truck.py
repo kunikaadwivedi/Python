@@ -1,4 +1,4 @@
-from vehicle import Vehicle
+from model.vehicle import Vehicle
 from vehicle_size import VehicleSize
 
 class Truck(Vehicle):
